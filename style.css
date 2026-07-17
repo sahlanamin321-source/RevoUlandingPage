@@ -802,14 +802,14 @@ body.modal-open {
   padding: 6px 18px;
 }
 .typewriter-text {
-  font-size: .88rem;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--blue);
 }
 .typewriter-cursor {
-  font-size: .88rem;
+  font-size: 30px;
   font-weight: 300;
   color: var(--blue);
   animation: blink .7s step-end infinite;
