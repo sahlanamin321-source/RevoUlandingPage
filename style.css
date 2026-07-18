@@ -818,3 +818,76 @@ body.modal-open {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
 }
+
+/* ---------- Tracking Slider ---------- */
+.track-slider-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 16px 0 32px;
+}
+.track-slider {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: slideTrack 28s linear infinite;
+  cursor: grab;
+}
+.track-slider:hover { animation-play-state: paused; }
+.track-slider:active { cursor: grabbing; }
+@keyframes slideTrack {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.track-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  width: 280px;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 24px -8px rgba(16,53,127,.12);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.track-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+.track-card-img {
+  background: linear-gradient(135deg, var(--ice), #e8f0fc);
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--blue);
+  border-bottom: 1px solid var(--line);
+}
+.track-card-img span {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.track-card .track-step {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  color: var(--champagne);
+  padding: 20px 20px 6px;
+}
+.track-card h3 {
+  font-size: 1rem;
+  padding: 0 20px 8px;
+  color: var(--navy);
+}
+.track-card p {
+  font-size: .84rem;
+  color: var(--muted);
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+@media (prefers-reduced-motion: reduce) {
+  .track-slider { animation: none; }
+}
